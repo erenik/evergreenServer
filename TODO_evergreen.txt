@@ -1,0 +1,26 @@
+log in ssh 
+
+cd /home/evergreen
+vi text editor 
+node main.js
+chmod a+rwx
+
+
+Index.html
+Download länk för spelet
+Registrera
+Login
+
+Databas 
+	turn survived
+		användare
+			lösenord
+
+
+			git pull
+			git add fileName
+			git rm fileName
+			git commit -m "Commit message"
+			git push
+
+				
