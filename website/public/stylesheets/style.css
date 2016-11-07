@@ -1,0 +1,22 @@
+body {
+  padding: 20px;
+  font: 16px Arial, sans-serif;
+  background-image: url("background2.jpg");
+
+  
+}
+a {
+  margin-top: 20px;
+  margin-left: 350px;
+  color: #000000;
+  font: 14px Arial;
+}
+
+p {
+	margin-left: 300px;
+}
+
+h1 {
+	margin-top: 50px;
+	margin-left: 300px;
+}

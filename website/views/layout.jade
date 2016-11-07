@@ -1,0 +1,20 @@
+doctype
+html
+  head
+    title= 'Evergreen'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
+  body
+    header
+      nav
+         a(href="/index") Index
+         a(href="/about") Register
+         a(href="/index") Login
+         a(href="views/download.jade") Download
+    section#wrapper
+        block content
+        footer 
+          section.css-table
+            section.four-column
+              section.cell
+                p Home Page Stuff
