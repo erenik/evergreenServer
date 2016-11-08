@@ -1,20 +1,35 @@
 doctype
 html
-  head
-    title= 'Evergreen login'
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
-  body
-    header
-      nav
-         a(href="/") Home
-         a(href="/register") Register
-         a(href="/login") Login
-         a(href="/download") Download
-    section#wrapper
-        block content
-        footer 
-          section.css-table
-            section.four-column
-              section.cell
-                p "Login"
+	head
+		title= 'Evergreen login'
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
+	body
+		header
+			nav
+				a(href="/") Home
+				a(href="/register") Register
+				a(href="/login") Login
+				a(href="/download") Download
+		section#wrapper
+			<table id="login">
+			<tr>
+			<td><label>Username</label></td>
+			</tr>
+			<tr>
+			<td colspan="2"><input class="textBox" id="username" type="text" maxlength="16"    required/></td>
+			</tr>
+			<tr>
+			<td id="pass"><label>Password</label></td>
+			<tr>
+			<td colspan="2"><input class="textBox" id="pass" type="text" maxlength="16" required/></td>
+			</tr>
+			<tr>
+			<td><input type="button" class="loginButtons" value="Login" onclick="submit();"/></td>
+			</table>
+			p "Login"
+			footer 
+				section.css-table
+					section.four-column
+						section.cell
+							
