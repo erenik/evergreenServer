@@ -5,28 +5,21 @@ var router = express.Router();
 var express = require('express');
 var router = express.Router();
 
+/* OSÄKER PÅ VAD DETTA GÖR */
 router.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home'
-  });
+  res.send('layout')
 });
 
 router.get('/download', function(req, res){
-  res.render('download', {
-    title: 'Download'
-  });
+  res.send('download')
 });
 
 router.get('/register', function(req, res){
-  res.render('register', {
-    title: 'Register'
-  });
+  res.send('register')
 });
 
 router.get('/login', function(req, res){
-  res.render('login', {
-    title: 'Login'
-  });
+  res.send('login')
 });
 
 module.exports = router;
