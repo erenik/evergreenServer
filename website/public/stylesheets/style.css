@@ -18,3 +18,9 @@ table {
   border-collapse: separate;
   border-spacing: 275px 5px;
 }
+form {
+  margin-left: 275px;
+}
+form p {
+  margin-left: 0px;
+}

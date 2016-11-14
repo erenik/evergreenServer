@@ -1,20 +1,27 @@
 doctype
 html
-  head
-    title= 'Evergreen register'
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
-  body
-    header
-      nav
-         a(href="/") Home
-         a(href="/register") Register
-         a(href="/login") Login
-         a(href="/download") Download
-    section#wrapper
-        block content
-        footer 
-          section.css-table
-            section.four-column
-              section.cell
-                p "Register"
+	head
+		title= 'Evergreen register'
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
+	body
+		header
+			nav
+				a(href="/") Home
+				a(href="/register") Register
+				a(href="/login") Login
+				a(href="/download") Download
+		section#wrapper
+			<br><br><form action="registerScript.php" method="POST"/>
+			p Username
+			<input name="username" type="text"/><br><br>
+			p Password
+			<input name="password" type="text"/><br><br>
+			<input type="submit" name="submit" value="Register"/>
+			</form>
+			block content
+			footer
+				section.css-table
+					section.four-column
+						section.cell
+							
