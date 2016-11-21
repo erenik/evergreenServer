@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET home page. */
 var express = require('express');
 var router = express.Router();
+var downloadEG = require('./downloadOne');
 
 /* OSÄKER PÅ VAD DETTA GÖR */
 /*
@@ -42,7 +43,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/download', function(req, res, next) {
-  res.render('download', { title: 'Express' });
+   res.render('download', { title: 'Express' });
 });
 
 router.get('/register', function(req, res, next) {

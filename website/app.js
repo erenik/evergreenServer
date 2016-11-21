@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var downloadOne = require('./routes/downloadOne');//require one for each download link
 
 var app = express();
 
@@ -20,11 +21,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+//app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use("/javascripts", express.static("./outJavascripts"));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/download', users);
+app.use('/downloadLinkOne', downloadOne); //when /downloadLinkOne is called from the website call downloadOne.js scrips
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -43,5 +47,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
