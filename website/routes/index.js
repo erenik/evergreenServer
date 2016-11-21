@@ -54,4 +54,8 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Express' });
 });
 
+router.get('/highscore', function(req, res, next) {
+  res.render('highscore', { title: 'Express' });
+});
+
 module.exports = router;
