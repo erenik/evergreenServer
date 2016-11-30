@@ -24,3 +24,7 @@ form {
 form p {
   margin-left: 0px;
 }
+textarea {
+	margin-left: 300px;
+	resize: none;
+}
