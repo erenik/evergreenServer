@@ -13,23 +13,10 @@ html
 				a(href="/download") Download
 				a(href="/highscore") Highscore
 		section#wrapper
-			<table id="login">
-			<tr>
-			<td><label>Username</label></td>
-			</tr>
-			<tr>
-			<td colspan="2"><input class="textBox" id="username" type="text" maxlength="16"    required/></td>
-			</tr>
-			<tr>
-			<td id="pass"><label>Password</label></td>
-			<tr>
-			<td colspan="2"><input class="textBox" id="pass" type="text" maxlength="16" required/></td>
-			</tr>
-			<tr>
-			<td><input type="button" class="loginButtons" value="Login" onclick="submit();"/></td>
-			</table>
-			footer 
-				section.css-table
-					section.four-column
-						section.cell
-							
+			<br><br><form action="/loginScriptOne" method="post"/>
+			p Username
+			<input name="username" type="text" id="username"/><br><br>
+			p Password
+			<input name="password" type="password" id="password"/><br><br>
+			<input type="submit" name="submit" value="Login"/>
+			</form>

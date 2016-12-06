@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var downloadOne = require('./routes/downloadOne');//require one for each download link
 var readHighscore = require('./routes/readHighscore');
 var registerScript = require('./routes/registerScript');
+var loginScript = require('./routes/loginScript');
 
 var app = express();
 
@@ -32,6 +33,8 @@ app.use('/download', users);
 app.use('/downloadLinkOne', downloadOne); //when /downloadLinkOne is called from the website call downloadOne.js scrips
 app.use('/readHighscoreOne', readHighscore); //FIX
 app.use('/registerScriptOne', registerScript);
+app.use('/loginScriptOne', loginScript);
+
 console.log('Starting Server');
 
 // catch 404 and forward to error handler
