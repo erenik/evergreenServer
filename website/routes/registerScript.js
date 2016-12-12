@@ -7,13 +7,13 @@ var pw = null;
 var exists = false;
 
 router.post('/', function(req, res) {
-	console.log('startofregister');
 	un = req.body.username;
 	pw = req.body.password;
 	fs.readFile('./public/files/register.txt', 'utf8', function(err, data) {	
 		register = data;
 		register = register.replace(/(\r\n|\n|\r)/gm,"");
 		accounts = register.split(';');
+		console.log(accounts);
 		for(i = 0; i < accounts.length; i++)
 		{
 			var username;
@@ -29,6 +29,7 @@ router.post('/', function(req, res) {
 				break;
 			}
 		}
+		console.log(exists);
 		if(exists == false)
 		{
 			console.log('trying to register');
@@ -37,8 +38,7 @@ router.post('/', function(req, res) {
 				res.redirect('/registered');
 			});
 		}
+		exists = false;
 	});
-
-	console.log('endofregister');
 });
 module.exports = router;
