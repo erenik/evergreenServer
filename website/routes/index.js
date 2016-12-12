@@ -62,4 +62,8 @@ router.get('/loggedin', function(req, res, next) {
   res.render('loggedin', { title: 'Express' });
 });
 
+router.get('/registered', function(req, res, next) {
+  res.render('registered', { title: 'Express' });
+});
+
 module.exports = router;
