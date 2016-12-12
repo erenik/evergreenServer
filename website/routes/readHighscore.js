@@ -5,11 +5,9 @@ var fs = require('fs');
 var hs = null;
 
 router.get('/', function(req, res) {
-	hs = req.body.highscore;
-	res.body.highscore = '0';
+	req.body.highscore = '0';
 	console.log('startingtoread');
 	fs.readFile('./public/files/highscore.txt', 'utf8', function(err, data) {
-		console.log(hs);
 		console.log('wrote: \n' + data);
 	});
 });

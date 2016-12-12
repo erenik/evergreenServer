@@ -58,4 +58,8 @@ router.get('/highscore', function(req, res, next) {
   res.render('highscore', { title: 'Express' });
 });
 
+router.get('/loggedin', function(req, res, next) {
+  res.render('loggedin', { title: 'Express' });
+});
+
 module.exports = router;
